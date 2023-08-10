@@ -1,7 +1,6 @@
 package com.db6n.service.service;
 
 import com.db6n.service.model.entity.NoteEntity;
-import com.db6n.service.model.entity.UserEntity;
 import com.db6n.service.repository.NoteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,6 +28,10 @@ public class NoteService {
 
     public void deleteNote(Long noteId){
         noteRepository.deleteById(noteId);
+    }
+
+    public List<NoteEntity> getNotesByText(String text) {
+        return noteRepository.findByText(text);
     }
 }
 
