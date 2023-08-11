@@ -127,3 +127,14 @@ User <-> Note: One user can have multiple notes, but each note belongs to one us
 Note <-> Frame: One note can be in one frame, but one frame can contain multiple notes.
 User <-> Frame: A user can create multiple frames for categorizing their notes.
 User <-> Notification: If notifications are implemented, one user may have multiple notifications.
+
+
+### Docker postgresql
+## Pull the Postgres Docker Image
+docker pull postgres
+## Create a Docker Volume
+docker volume create postgres_data
+## Run the Postgres Docker Container
+
+docker run --name postgres_container -e POSTGRES_PASSWORD=password -d -p 5433:5432 -v postgres_data:/var/lib/postgresql/data postgres
+docker exec -it postgres_container bash

@@ -9,6 +9,6 @@ import java.util.List;
 public interface NoteRepository extends JpaRepository<NoteEntity, Long> {
 
     Note findById(long noteId);
-    List<NoteEntity> findByName(String name);
+    List<NoteEntity> findByOwner(String owner);
     List<NoteEntity> findByText(String text);
 }

@@ -23,7 +23,7 @@ public class NoteService {
     }
 
     public List<NoteEntity> getNoteByOwner(String owner){
-        return noteRepository.findByName(owner);
+        return noteRepository.findByOwner(owner);
     }
 
     public void deleteNote(Long noteId){

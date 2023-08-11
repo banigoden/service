@@ -41,9 +41,4 @@ public class UserController {
         userService.deleteUser(userId);
     }
 
-    @GetMapping("/name/{name}")
-    public List<UserEntity> getUsersByName(@PathVariable String name) {
-        return userService.getUsersByName(name);
-    }
-
 }

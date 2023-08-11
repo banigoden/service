@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 @Data
 @RequiredArgsConstructor
 @Entity
+@Table(name = "note_entity")
 public class NoteEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

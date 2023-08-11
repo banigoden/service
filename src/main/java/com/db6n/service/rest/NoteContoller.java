@@ -34,10 +34,4 @@ public class NoteContoller {
        note.setNodeId(noteId);
        return noteService.createNote(note);
     }
-
-    @GetMapping("/text/{text}")
-    public List<NoteEntity> getNotesByText(@PathVariable String text) {
-        return noteService.getNotesByText(text);
-    }
-
 }
